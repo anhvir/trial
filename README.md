@@ -10,7 +10,7 @@ I'm aware that if we want to build a (well, complicated) application in C,
 we'd probably build not a single .c file, but several of them. 
 My project today might be not too complicated (or, is it?), but I'll 
 try to build it as a multiple-file project anyway, just to learn,
-and perhaps to be ready for assignment 1. 
+and *perhaps to be ready for assignment 1*. 
 
 **Technical issues:**
 Of course, I should create a new directory/folder for this project.
@@ -85,7 +85,7 @@ Note that: a) `intArray.h` is called a *header file*, and b) in the above
 line, we use **"intArray.h"**, not **<intArray.h>**.
     
 ### First attempt to  compile
-Now, after finishing the typing and saving (`main.c`)[./main.c], 
+Now, after finishing the typing and saving [`main.c`](./main.c), 
 (`intArray.h`)[./intArray.h], and (`intArray.c`)[./intArray.c]
 (yes, you can click on these links to see the codes),
 I am thinking about compiling. I can use the Terminal to compile with:
