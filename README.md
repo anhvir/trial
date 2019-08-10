@@ -253,14 +253,14 @@ one or both algorithms, you will see the O(n) and O(logn)
 in action!   
 
 ### Summary
-This story gives examples of
-  # Building a multiple-file C project
-  # Using `make` and `Makefile`
-  # Organizing experiments to measure algorithm/program performance
-  # Timing in C code
-  # Packing a C program into a function
-  # `malloc` and `free` 
-  # and perhaps some other things, like using static variables...  
+*This story gives examples of*
+  * **Building a multiple-file C project **
+  * **Using `make` and `Makefile` **
+  * **Organizing experiments to measure algorithm/program performance **
+  * **Timing in C code **
+  * **Packing a C program into a function **
+  * **`malloc` and `free` **
+  * **and perhaps some other things, like using static variables...**  
 
 -------------------------------------------------------------------
 ## HOW_TO: download/copy the files from this github repository
