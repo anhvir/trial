@@ -257,13 +257,13 @@ in action!
 
 This story gives examples of
 
-  * **Building a multiple-file C project **
-  * **Using `make` and `Makefile` **
-  * **Organizing experiments to measure algorithm/program performance **
-  * **Timing in C code **
-  * **Packing a C program into a function **
-  * **`malloc` and `free` **
-  * **and perhaps some other things, like using static variables...**  
+  * Building a multiple-file C project 
+  * Using `make` and `Makefile` 
+  * Organizing experiments to measure algorithm/program performance 
+  * Timing in C code 
+  * Packing a C program into a function 
+  * `malloc` and `free` 
+  * and perhaps some other things, like using static variables... 
 
 -------------------------------------------------------------------
 ## HOW_TO: download/copy the files from this github repository
