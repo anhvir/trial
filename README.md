@@ -86,8 +86,8 @@ line, we use **"intArray.h"**, not **<intArray.h>**.
     
 ### First attempt to  compile
 Now, after finishing the typing and saving [`main.c`](./main.c), 
-(`intArray.h`)[./intArray.h], and (`intArray.c`)[./intArray.c]
-(yes, you can click on these links to see the codes),
+[`intArray.h`](./intArray.h), and [`intArray.c`](./intArray.c)
+(note, these names are links, and you can click on these links to see the codes),
 I am thinking about compiling. I can use the Terminal to compile with:
 ```bash
 gcc -Wall -o search main.c intArray.c
@@ -153,8 +153,8 @@ Fortunately, I already have the `.c` program for sequential search
 in the lecture slides! I came there, copied the content, pasted and 
 saved it as "seq_search.c". Essentially, I don't need to make a lot 
 of changes here, just some simple things to pack that C program
-into *a function*. I ended up with my files (`search.h`)[./search.h]
-and (`seq_search.c`)(./seq_search.c) (again, when you see a link, you
+into *a function*. I ended up with my files [`search.h`](./search.h)
+and [`seq_search.c`](./seq_search.c) (again, when you see a link, you
 can just click on that for the content).
 
 After that I change my `Makefile` to:
@@ -176,7 +176,7 @@ the same function name `search` for both sequential and binary search.
 It is possible because I will not compile both `seq_search.c` and
 `bin_search` into a single executable file. Yes, I went to the lecture
 slide again, stole Nir's code, changed a bit, and have my
-(`bin_search.c`)[./bin_search.c]. Note that I don't need another
+[`bin_search.c`](./bin_search.c). Note that I don't need another
 `.h` file because `bin_search.c` has the same interface as `seq_search.c`.
 
 Now my `Makefile` would look like:
