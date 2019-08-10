@@ -1,8 +1,6 @@
 # c203: Week 03 Story
 
-## Step-to-step building a multiple-file C project
-to test the performance of both sequential and binary search algorithms.
-Also showing how to use "make" for compiling two programs in one shot.
+## Step-to-step building a multiple-file C project to test the performance of both sequential and binary search algorithms. Also showing how to use "make" for compiling two programs in one shot.
 
 Inspired by our lectures last week, I wants to implement sequential and
 binary search, and through these implementations, convince myself about
