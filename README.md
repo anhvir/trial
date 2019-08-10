@@ -254,7 +254,9 @@ one or both algorithms, you will see the O(n) and O(logn)
 in action!   
 
 ### Summary
-*This story gives examples of*
+
+This story gives examples of
+
   * **Building a multiple-file C project **
   * **Using `make` and `Makefile` **
   * **Organizing experiments to measure algorithm/program performance **
