@@ -99,13 +99,13 @@ I also can compile my unfinished project in 3 steps as follow:
 ```bash
 gcc -Wall -c main.c
 gcc -Wall -c intArray.c
-gcc -o search main.o search.o
+gcc -o search main.o intArray.o
 ```
 in which the first step asks `gcc` to translate `main.c` into the 
-*object* format, which is a file in machine language, but is not
+*object file* `main.o`, which is a file in machine language, but is not
 an executable file (because, say, there is no possible link to 
-`createSortedArray()` from `main.c` alone).
- The last step links the object files 
+`createSortedArray()` from `main.o` alone).
+ The last step links the object files `main.o` and `intArray.o` 
 together and create the executable file `search`. Oh yes, now my `./search`
 is running! But note that it doesn't do any search!  
 
@@ -150,8 +150,9 @@ I start with implementing the sequential search algorithm.
 The best way to do that implementation is just 
 to build 2 other text files, namely, `search.h` and `seq_search.c`.
 Fortunately, I already have the `.c` program for sequential search
-in the lecture slides! I came there, copied the content, pasted and 
-saved it as "seq_search.c". Essentially, I don't need to make a lot 
+in the lecture slides! I came there, copied the content of the
+sequential search slide, pasted and 
+saved it as `seq_search.c`. Essentially, I don't need to make a lot 
 of changes here, just some simple things to pack that C program
 into *a function*. I ended up with my files [`search.h`](./search.h)
 and [`seq_search.c`](./seq_search.c) (again, when you see a link, you
@@ -257,13 +258,16 @@ in action!
 
 This story gives examples of
 
-  * Building a multiple-file C project 
-  * Using `make` and `Makefile` 
-  * Organizing experiments to measure algorithm/program performance 
-  * Timing in C code 
-  * Packing a C program into a function 
-  * `malloc` and `free` 
-  * and perhaps some other things, like using static variables... 
+  * building a multiple-file C project,
+  * C header files,
+  * using `#ifndef ... #endif` i  header files, 
+  * using `make` and `Makefile`, 
+  * organizing experiments to measure algorithm/program performance, 
+  * timing in a fragment of C code, 
+  * packing a C program into a function, 
+  * using `malloc` and `free`, 
+  * and perhaps some other things, such as employing `argc`, `argv`,
+using static variables... 
 
 -------------------------------------------------------------------
 ## HOW_TO: download/copy the files from this github repository
