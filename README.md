@@ -58,7 +58,7 @@ be declared as `int *` for use with dynamic memory!
 
 ### Using multiple files
 Of course I could put all needed functions inside `main.c`. 
-But how about putting all tools for creating arrays is one .c file,
+But how about placing all tools for creating arrays is one .c file,
 and creating `search()` in another file? Wow, it would be a good idea:
 next time, whenever I want to use these tools again in a new project,
 I just need to copy these files into the new project folder.
@@ -74,7 +74,7 @@ int *createSortedArray(int n);
     and populates it with random elements of array A[n] */
 int *createRandomArrayFromA(int m, int *A, int n);
 ``` 
-As a rule, I should place the above two function prototypes on top 
+As a rule, I should insert the above two function prototypes at the top 
 of my `main.c`. But there is
 a better way: I created file `intArray.h` that essentially contains
 these 2 prototypes. Then, on top of my `main.c` I just need to put:
@@ -171,8 +171,9 @@ There is certainly a number of ways to add binary search into my project.
 But here, I choose the following way: Since I can have several targets
 in my `Makefile`, I will create two separate targets, one for 
 sequential, and one for binary search. I also come up with an interesting
-idea: building `bin_search.c` for implementing binary search, and use
-the same function name `search` for both sequential and binary search.
+idea: when building `bin_search.c` for implementing binary search, employ
+the same function name `search` (that was used before for
+sequential search) for the binary search.
 It is possible (to use the same name for 2 different functions)
 because I will not compile both `seq_search.c` and
 `bin_search.c` into a single executable file. 
@@ -182,7 +183,7 @@ slide again, stole Nir's code (but I should acknowledge, right?),
  changed a bit, and have my
 [`bin_search.c`](./bin_search.c). Note that I don't need another
 `.h` file because  functions in `bin_search.c` have
- the same interface as of thoese in `seq_search.c`.
+ the same interface as those in `seq_search.c`.
 
 Now my `Makefile` would look like:
 ```make
