@@ -101,13 +101,13 @@ gcc -Wall -c main.c
 gcc -Wall -c intArray.c
 gcc -o search main.o search.o
 ```
-in which the first step ask `gcc` to translate `main.c` into the 
+in which the first step asks `gcc` to translate `main.c` into the 
 *object* format, which is a file in machine language, but is not
 an executable file (because, say, there is no possible link to 
 `createSortedArray()` from `main.c` alone).
  The last step links the object files 
-together and create the executable file `search`. Oh yes, my `./search`
-is running, but it doesn't do any search!  
+together and create the executable file `search`. Oh yes, now my `./search`
+is running! But note that it doesn't do any search!  
 
 ### First attempt to use `make`
 But hand on, we know a bit about `make`, and I want to employ that for
@@ -173,11 +173,16 @@ in my `Makefile`, I will create two separate targets, one for
 sequential, and one for binary search. I also come up with an interesting
 idea: building `bin_search.c` for implementing binary search, and use
 the same function name `search` for both sequential and binary search.
-It is possible because I will not compile both `seq_search.c` and
-`bin_search` into a single executable file. Yes, I went to the lecture
-slide again, stole Nir's code, changed a bit, and have my
+It is possible (to use the same name for 2 different functions)
+because I will not compile both `seq_search.c` and
+`bin_search.c` into a single executable file. 
+
+For binary search, I went to the lecture
+slide again, stole Nir's code (but I should acknowledge, right?),
+ changed a bit, and have my
 [`bin_search.c`](./bin_search.c). Note that I don't need another
-`.h` file because `bin_search.c` has the same interface as `seq_search.c`.
+`.h` file because  functions in `bin_search.c` have
+ the same interface as of thoese in `seq_search.c`.
 
 Now my `Makefile` would look like:
 ```make
@@ -203,29 +208,44 @@ bin_search: intArray.h intArray.c main.c Makefile bin_search.c
 My project now is ready for use!     
 
 ### Improving `Makefile`
-I don't actually like the above `Makefile`. at least because I have to
+I don't actually like the above `Makefile`, at least because I have to
 repeat each file name twice. That also means that if I build a new
 project, I have to write `Makefile` from scratch.
 
 After a bit of research, I came up with the following 
-(`Makefile`)[./Makefile]. Have a look at that file, and you could
+[`Makefile`](./Makefile). Have a look at that file, and you could
 see that we can easily adapt it for a new project. If you need 
 some more explanations, please click on 
-(`Makefile_explained`)[./Makefile_explained].
+[`Makefile_explained`](./Makefile_explained).
 
 ### Enjoy!
+Now I run
+```bash0
+./bin_search 1 100
+./bin_search 10 100
+./bin_search 100 100
+./bin_search 1000 100
+./bin_search 10000 100
+./bin_search 100000 100
+./bin_search 1000000 100
+```
+And looked as the outputs. I was certainly convinced that both the
+running time and number of comparison are proportional to log_2(n).
+And, if I try "seq_search" I could see that that guy is much slower
+when n big enough  
+
 Suppose that I want to get data for a graph showing the performance
 of binary and sequential search, I can run
 ```bash
 ./bin_search n m
-./bin_search n m
+./seq_search n m
 
 ```
-with different values of n, and with m=100 (say), and collect the data
+with different values of n, and with m=100 (say), and gather the data
 into Excel sheet for a graph. If I am good at writing scripts, I can
 also build a shell script for running a series of experiments and
 automatically collecting the data into a table. Or, I can just change my
-main.c so that it run a bundle of experiments with 
+`main.c` so that it runs a bundle of experiments with 
 n=1,10,100,1000,...,1000000000 and output efficiency data in a
 table format... If you have time, build that graph of running time
 (or of number of comparisons) for 
@@ -239,7 +259,8 @@ This story gives examples of
   # Organizing experiments to measure algorithm/program performance
   # Timing in C code
   # Packing a C program into a function
-  # `malloc` and `free`   
+  # `malloc` and `free` 
+  # and perhaps some other things, like using static variables...  
 
 -------------------------------------------------------------------
 ## HOW_TO: download/copy the files from this github repository
