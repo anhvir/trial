@@ -1,12 +1,15 @@
+/* Anh Vo, avo@unimelb.edu.au, for unimelb.COMP20003.Workshop.Week3 */
+
 /* function search() is copied from Nir's Week 2 lecture slides
-   with some trivial changes to fit into a function
-   Complied by avo@unimelb.edu.au
+   with some trivial changes (just to fit the code into a function)
 */
+
 
 #include <stdio.h>
 #include "search.h"
 
-/*  prints out background */
+/*  prints out background 
+*/
 void info() {
 	printf("********************************************************\n");
 	printf("*   Performing BINARY SEARCH in a sorted array of int  *\n");

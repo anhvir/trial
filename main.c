@@ -2,14 +2,11 @@
 
 /* This file is a driver for "search", which is 
    a toy multiple-file project demonstrates the use of:
-   - generating an array of integers in increasing order,
-   - sequential and binary search
-   - timing 
-   - comparing running time ...   
-     
+   - generating a sorted array of integers,
+   - sequential and binary search,
+   - timing and
+   - ouputing indicators of efficiency performance 
 */
-
-#define N_EXPTS 10       /* number of experiments for each n */
 
 
 #include <stdio.h>
@@ -21,9 +18,9 @@
 #include "search.h"
 
 
-#define STD_SIZE 10000
-#define STD_SEARCHES 100
-double timer(); 
+#define STD_SIZE 10000       /* default size of the array-dictionnary */ 
+#define STD_SEARCHES 100     /* default number of searches performed  */
+double timer();              /* function for timing                   */
 
 int main(int argc, char *argv[]) {
 	int *A, n= STD_SIZE;      // A[n] represents a simplified dictionnary
@@ -77,6 +74,7 @@ int main(int argc, char *argv[]) {
 
 /********************** TIMING TOOLS ***************************/	
 #define SEC_2_MU_SEC 1000000
+
 // timer: function for measuring time 
 //   returns micro-seconds passed since the previous call to the function
 double timer() {

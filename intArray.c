@@ -15,8 +15,8 @@
 
 
 /*  Creates an array of n integers
-	and populates it random numbers, in strictly increasing order */
- 	
+	and populates it random numbers, in strictly increasing order 
+*/
 int *createSortedArray(int n) {
 	static int need_srand=1;
 	int *A; 
@@ -41,8 +41,10 @@ int *createSortedArray(int n) {
 	return A;
 }
 
+
 /*  Creates an array of m integers,
-    and populates it with random elements of array A[n] */
+    and populates it with random elements of array A[n] 
+*/
 int *createRandomArrayFromA(int m, int *A, int n) {
 	int *B; 
 	int i;
@@ -59,7 +61,8 @@ int *createRandomArrayFromA(int m, int *A, int n) {
 	return B;
 }
 
-/* free aray *A[] and set *A to NULL */
+/* free aray *A[] and set *A to NULL 
+*/
 void deleteArray(int **A) {
 	free(*A);
 	*A= NULL;

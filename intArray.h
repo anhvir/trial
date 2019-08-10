@@ -1,3 +1,5 @@
+/* Anh Vo, avo@unimelb.edu.au, for unimelb.COMP20003.Workshop.Week3 */
+
 /* tools for working with arrays of int 
 */
 
@@ -14,7 +16,7 @@
 #define MAX_N 1000000000
 
 #ifndef NOT_FOUND       /* if NOT_FOUND not yet #define-d elsewhere */
-  #define NOT_FOUND -1 
+  #define NOT_FOUND -1  /* then #define it with safe value -1       */ 
 #endif
 
 /*  Creates an array of n integers
@@ -28,4 +30,4 @@ int *createRandomArrayFromA(int m, int *A, int n);
 /* free aray *A[] and set *A to NULL */
 void deleteArray(int **A);
 
-#endif
+#endif      /* this is the end of the topmost #ifndef */
