@@ -20,8 +20,8 @@ mkdir Search
 cd Search
 ``` 
 for this purpose. I will also use Jupyter `Text File` to edit all
-of my project's files. Of course, I can do all these things using 
-minGW/jEdit or some other combinations, but why not just try Jupyter?
+of my project's files. Naturally, I can do all these things using 
+minGW/jEdit or some other combinations, but why not just use Jupyter?
 
 ### The main logic 
 I love the top-down design approach!
@@ -212,7 +212,7 @@ My project now is ready for use!
 ### Improving `Makefile`
 I don't actually like the above `Makefile`, at least because I have to
 repeat each file name twice. That also means that if I build a new
-project, I have to write `Makefile` from scratch.
+project, I probably better to write `Makefile` from scratch!
 
 After a bit of research, I came up with the following 
 [`Makefile`](./Makefile). Have a look at that file, and you could
