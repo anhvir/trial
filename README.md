@@ -1,6 +1,7 @@
 COMP20003 Week 12: Notes on assignment 2
 =======================
 
+[I'm an inline-style link](https://canvas.lms.unimelb.edu.au/courses/8028/pages/week-3?module_item_id=1431923)
 
   # How to do the timing?
 Function `clock()` in `<time.h>` return the current time. The returned value belongs
